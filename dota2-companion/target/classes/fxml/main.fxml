@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dota2companion.ui.MainController">
+
+    <top>
+        <HBox styleClass="title-bar" fx:id="titleBar">
+            <children>
+                <FontIcon iconLiteral="mdi2g-gamepad" iconSize="16" iconColor="#6C63FF" />
+                <Label text="Dota 2 Companion" styleClass="app-title" />
+                <HBox HBox.hgrow="ALWAYS" />
+                <Button fx:id="minimizeBtn" styleClass="minimize-btn" onAction="#minimizeWindow" text="—" />
+                <Button fx:id="maximizeBtn" styleClass="maximize-btn" onAction="#maximizeWindow" text="□" />
+                <Button fx:id="closeBtn" styleClass="close-btn" onAction="#closeWindow" text="×" />
+            </children>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10" styleClass="sidebar" prefWidth="220">
+            <padding>
+                <Insets top="20" right="10" bottom="20" left="10"/>
+            </padding>
+            <Button fx:id="profileButton" text="Профиль" onAction="#showProfile" styleClass="nav-item">
+                <graphic>
+                    <FontIcon iconLiteral="mdi2a-account" iconSize="18" iconColor="#8888A0" />
+                </graphic>
+            </Button>
+            <Button fx:id="matchesButton" text="Матчи" onAction="#showMatches" styleClass="nav-item">
+                <graphic>
+                    <FontIcon iconLiteral="mdi2s-sword-cross" iconSize="18" iconColor="#8888A0" />
+                </graphic>
+            </Button>
+            <Button fx:id="heroesButton" text="Герои" onAction="#showHeroes" styleClass="nav-item">
+                <graphic>
+                    <FontIcon iconLiteral="mdi2h-human" iconSize="18" iconColor="#8888A0" />
+                </graphic>
+            </Button>
+            <Button fx:id="progressButton" text="Прогресс" onAction="#showProgress" styleClass="nav-item">
+                <graphic>
+                    <FontIcon iconLiteral="mdi2c-chart-line" iconSize="18" iconColor="#8888A0" />
+                </graphic>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentRoot" />
+    </center>
+
+</BorderPane>
+

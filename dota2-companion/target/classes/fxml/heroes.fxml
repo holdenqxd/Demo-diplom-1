@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dota2companion.ui.HeroController">
+
+    <center>
+        <VBox spacing="16">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <VBox styleClass="card" spacing="12">
+                <Label text="Статистика героев" style="-fx-font-size: 16px; -fx-font-weight: 600;" />
+                <TableView fx:id="heroesTable" prefHeight="300">
+                    <columns>
+                        <TableColumn text="Герой" fx:id="heroColumn"/>
+                        <TableColumn text="Ваш винрейт" fx:id="playerWinrateColumn"/>
+                        <TableColumn text="Глобальный винрейт" fx:id="globalWinrateColumn"/>
+                        <TableColumn text="Ваш ЗМ/мин" fx:id="playerGpmColumn"/>
+                        <TableColumn text="Глобальный ЗМ/мин" fx:id="globalGpmColumn"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox styleClass="card" spacing="12">
+                <Label text="Сравнение ЗМ/мин" style="-fx-font-size: 16px; -fx-font-weight: 600;" />
+                <LineChart fx:id="heroGpmChart" prefHeight="300">
+                    <xAxis>
+                        <NumberAxis label="Герои"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="ЗМ/мин"/>
+                    </yAxis>
+                </LineChart>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>
+

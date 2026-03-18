@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dota2companion.ui.ProfileController">
+
+    <center>
+        <VBox spacing="16">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <VBox styleClass="card" spacing="12">
+                <Label text="Поиск игрока" style="-fx-font-size: 16px; -fx-font-weight: 600;" />
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <TextField fx:id="steamIdField" promptText="Введите Steam ID или ник..." prefWidth="300" />
+                    <Label fx:id="playerNameLabel" text="Игрок: -" />
+                    <Label fx:id="mmrLabel" text="MMR: -" />
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label fx:id="statusLabel" text="" />
+                    <ProgressIndicator fx:id="loadingIndicator" visible="false" prefWidth="24" prefHeight="24"/>
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="card" spacing="12">
+                <Label text="Последние матчи" style="-fx-font-size: 16px; -fx-font-weight: 600;" />
+                <TableView fx:id="matchesTable" prefHeight="400">
+                    <columns>
+                        <TableColumn fx:id="heroColumn" text="Герой" prefWidth="120"/>
+                        <TableColumn fx:id="winColumn" text="Победа" prefWidth="80"/>
+                        <TableColumn fx:id="kdaColumn" text="КДА" prefWidth="90"/>
+                        <TableColumn fx:id="gpmColumn" text="ЗМ/мин" prefWidth="90"/>
+                        <TableColumn fx:id="xpmColumn" text="ОП/мин" prefWidth="90"/>
+                        <TableColumn fx:id="durationColumn" text="Длительность" prefWidth="110"/>
+                        <TableColumn fx:id="dateColumn" text="Дата" prefWidth="140"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox styleClass="card" spacing="12">
+                <Label text="Тренд ЗМ/мин" style="-fx-font-size: 16px; -fx-font-weight: 600;" />
+                <LineChart fx:id="gpmChart" prefHeight="200">
+                    <xAxis>
+                        <NumberAxis label="Игра" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="ЗМ/мин" />
+                    </yAxis>
+                </LineChart>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>
+

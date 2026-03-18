@@ -1,0 +1,16 @@
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\api\ClaudeClient.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\api\OpenDotaClient.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\db\DatabaseManager.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\Main.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\model\HeroStats.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\model\Match.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\model\Player.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\service\AnalysisService.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\service\MatchService.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\state\AppState.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\Animations.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\HeroController.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\MainController.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\MatchController.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\ProfileController.java
+C:\ДИПЛОМ\dota2-companion\src\main\java\com\dota2companion\ui\ProgressController.java
