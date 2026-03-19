@@ -1,22 +1,22 @@
-/* Design Tokens - Reusable Color Variables */
+
 .root {
-    /* Background Colors */
+    
     -bg-primary: #0D0D0F;
     -bg-surface: #16161A;
     -bg-surface-elevated: #1E1E24;
     
-    /* Border Colors */
+    
     -border-default: #2A2A35;
     
-    /* Accent Colors */
+
     -accent-primary: #6C63FF;
     -accent-hover: #8B84FF;
     
-    /* Text Colors */
+    
     -text-primary: #F0F0F5;
     -text-secondary: #8888A0;
     
-    /* Status Colors */
+ 
     -success: #3DDC84;
     -error: #FF5C5C;
     -warning: #F5A623;
