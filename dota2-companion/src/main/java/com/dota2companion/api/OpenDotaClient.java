@@ -34,8 +34,6 @@ public class OpenDotaClient {
             return CompletableFuture.failedFuture(new IllegalArgumentException("Пустой запрос."));
         }
 
-        // Если во вводе НЕТ букв (возможны ведущие символы типа '\' при копировании) —
-        // извлекаем числовую часть и пытаемся трактовать как account_id / SteamID64.
         boolean hasLetters = trimmed.chars().anyMatch(Character::isLetter);
         if (!hasLetters) {
             java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("(\\d+)").matcher(trimmed);
@@ -122,7 +120,6 @@ public class OpenDotaClient {
 
                     Player player = new Player();
                     player.setAccountId(accountId);
-                    // Если MMR в ответе не пришёл — будем считать это "неизвестно".
                     player.setMmrEstimate(-1);
 
                     JsonObject profile = json.getAsJsonObject("profile");
@@ -132,7 +129,6 @@ public class OpenDotaClient {
 
                     JsonObject mmrEstimate = json.getAsJsonObject("mmr_estimate");
                     if (mmrEstimate != null && mmrEstimate.has("estimate")) {
-                        // OpenDota возвращает MMR как число, иногда с дробной частью.
                         player.setMmrEstimate((int) Math.round(mmrEstimate.get("estimate").getAsDouble()));
                     }
 
