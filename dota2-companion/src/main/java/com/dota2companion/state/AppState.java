@@ -3,10 +3,6 @@ package com.dota2companion.state;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-/**
- * Глобальное состояние выбранного игрока.
- * Используется, чтобы вкладка "Матчи" могла обновляться после ввода аккаунта в "Профиль".
- */
 public final class AppState {
 
     private AppState() {}
@@ -35,7 +31,7 @@ public final class AppState {
                 try {
                     r.run();
                 } catch (Exception ignored) {
-                    // Не ломаем приложение из-за обработчика UI.
+                    
                 }
             }
         }
