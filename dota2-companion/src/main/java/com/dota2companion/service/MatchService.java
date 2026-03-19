@@ -25,7 +25,6 @@ public class MatchService {
     public CompletableFuture<List<Match>> loadRecentMatches(long accountId, int limit) {
         return openDotaClient.fetchRecentMatches(accountId, limit)
                 .thenApply(matches -> {
-                    // Обогащаем матчи именами героев
                     try {
                         Map<Integer, String> heroes = openDotaClient.fetchHeroes()
                                 .get(5, TimeUnit.SECONDS);
