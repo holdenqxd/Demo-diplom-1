@@ -1,18 +1,13 @@
-/* Global Stylesheet - Modern Dark UI */
-
-/* Root Styles */
 .root {
     -fx-background-color: #0D0D0F;
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-font-size: 14px;
 }
 
-/* Label Styles */
 .label {
     -fx-text-fill: #F0F0F5;
 }
 
-/* Button Styles */
 .button {
     -fx-background-color: #6C63FF;
     -fx-text-fill: #F0F0F5;
@@ -39,7 +34,6 @@
     -fx-background-color: #6C63FF1A;
 }
 
-/* Text Input Styles */
 .text-field, .text-area, .combo-box {
     -fx-background-color: #16161A;
     -fx-border-color: #2A2A35;
@@ -54,7 +48,6 @@
     -fx-border-width: 1.5px;
 }
 
-/* TableView Styles */
 .table-view {
     -fx-background-color: #16161A;
     -fx-border-color: transparent;
@@ -100,7 +93,6 @@
     -fx-text-fill: #F0F0F5;
 }
 
-/* ScrollBar Styles */
 .scroll-bar {
     -fx-background-color: transparent;
 }
@@ -119,12 +111,10 @@
     -fx-background-color: #3A3A48;
 }
 
-/* Separator Styles */
 .separator {
     -fx-background-color: #2A2A35;
 }
 
-/* Tooltip Styles */
 .tooltip {
     -fx-background-color: #1E1E24;
     -fx-text-fill: #F0F0F5;
@@ -132,7 +122,6 @@
     -fx-background-radius: 6px;
 }
 
-/* Layout Components */
 .sidebar {
     -fx-background-color: #16161A;
     -fx-border-color: #2A2A35;
@@ -182,7 +171,6 @@
     -fx-font-weight: 600;
 }
 
-/* Window Control Buttons */
 .close-btn:hover {
     -fx-background-color: #FF5C5C;
 }
@@ -215,13 +203,11 @@
     -fx-text-fill: #6C63FF;
 }
 
-/* Text-only controls (icons are rendered via text) */
 .close-btn, .minimize-btn, .maximize-btn {
     -fx-font-size: 18px;
     -fx-alignment: center;
 }
 
-/* Chart Styles */
 .chart {
     -fx-background-color: transparent;
 }
